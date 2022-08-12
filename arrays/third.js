@@ -26,13 +26,13 @@
 
 let min = arr[0]; 
 let max = arr[0];
-
-
+var minIndex = arr.indexOf(Math.min(...arr));
+var maxIndex = arr.indexOf(Math.max(...arr));
 
 
 for (let i = 0; i < arr.length - 1; i++){
    // min = min > arr[i + 1] ? arr[i + 1] : min;
-    if (min>arr[i + 1]){
+    if (min > arr[i + 1]){
         min = arr[i + 1];
     }
     //max = max < arr[i + 1] ? arr[i + 1] : max;
@@ -43,11 +43,11 @@ for (let i = 0; i < arr.length - 1; i++){
     console.log(arr[i]);
 }
 alert(`Минимальное значение: ${min}, Максимальное значение: ${max}`)
+var replace1 = arrp[minIndex];
+arr[minIndex] = arr[maxIndex];
+arr[maxIndex] = replace1
+console.log(arr)
 
-let replace1 = arr[max];
- arr[max] = arr[min];
- arr[min] = replace1;
- alert(arr);
 
 /* 1. i = 0  4      arr[i+1] = 0
     2. i = 1 0      arr[i+1] = 2        
