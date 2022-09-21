@@ -24,14 +24,26 @@ unshiftSecond(array1, 1)*/
 
 
 
+/*let arr1 = [1,2,3]
+
+function popSecond (array) {   
+    let save = array[array.length - 1];
+    array.length = array.length - 1;
+    
+    return save;
+}
+console.log(popSecond(arr1))*/
+
 let arr1 = [1,2,3]
 
-function popSecond (array) {
-    var array = [];
-    array = arr1 - 1;
-    var i = array.length;
-    return array[i] - 1;
-}
-console.log(popSecond(arr1))
+function shiftSecond (array) {
+    let save = array[0];
+    let arr = [];
+    for (let i = 0; i < array.length; i++){
+             arr[i] = array[i + 1];
+    }   
+    return save;
+}   console.log(shiftSecond(arr1))
 
-
+// изменить оригинальный массив!
+// Например сравнить / без доп массива 

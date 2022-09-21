@@ -26,18 +26,20 @@
 
 let min = arr[0]; 
 let max = arr[0];
-var minIndex = arr.indexOf(Math.min(...arr));
-var maxIndex = arr.indexOf(Math.max(...arr));
+let minIndex = 0
+let maxIndex = 0
 
 
 for (let i = 0; i < arr.length - 1; i++){
    // min = min > arr[i + 1] ? arr[i + 1] : min;
     if (min > arr[i + 1]){
         min = arr[i + 1];
+        minIndex = i + 1;
     }
     //max = max < arr[i + 1] ? arr[i + 1] : max;
     if (max < arr[i + 1]) {
-        max = arr[i + 1]
+        max = arr[i + 1];
+        maxIndex = i + 1;
     }
 
     console.log(arr[i]);

@@ -7,7 +7,8 @@ let result;
 for ( i = 0; i < x; i++ ) {
     arr.push( Math.round( Math.random() * 100 ));
     sum +=arr[i];
-}   alert(arr);
-    result = sum / x;
-     alert(result);
+}   
+alert(arr);
+result = sum / x;
+alert(result);
  
